@@ -1,4 +1,5 @@
-import { defineConfig, presetIcons, presetUno } from 'unocss'
+import { defineConfig, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
+import { presetEllipsis, presetIcon, presetSafearea, presetShortcuts, transformerWh } from '@bryce-loskie/unocss-preset-mini'
 
 export default defineConfig({
   content: {
@@ -18,15 +19,16 @@ export default defineConfig({
   shortcuts: [
     ['wh-full', 'w-full h-full'],
   ],
+  transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
+    transformerWh,
+  ],
   presets: [
+    presetEllipsis,
+    presetSafearea,
+    presetShortcuts,
     presetUno(),
-    presetIcons({
-      scale: 1.2,
-      warn: true,
-      extraProperties: {
-        'display': 'inline-block',
-        'vertical-align': 'middle',
-      },
-    }),
+    presetIcon(),
   ],
 })

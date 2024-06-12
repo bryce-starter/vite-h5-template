@@ -9,15 +9,5 @@ export const setupRouter = (app: App) => {
     routes: setupLayouts(routes),
   })
 
-  const publicRoutes = ['/login', '/register']
-
-  router.beforeEach((to, from, next) => {
-    const isPublic = publicRoutes.includes(to.path)
-    if (isPublic)
-      return next()
-
-    return next('/login')
-  })
-
   app.use(router)
 }

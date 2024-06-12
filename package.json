@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.21.1",
+    "@bryce-loskie/unocss-preset-mini": "^0.1.5",
     "@iconify-json/carbon": "^1.1.35",
     "@types/node": "^20.14.2",
     "@unocss/eslint-config": "^0.61.0",

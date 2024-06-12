@@ -2,5 +2,9 @@
 </script>
 
 <template>
-  <div>It works</div>
+  <div>
+    <van-button type="primary">
+      It works
+    </van-button>
+  </div>
 </template>

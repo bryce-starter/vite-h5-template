@@ -1,0 +1,22 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["DOM", "ESNext"],
+    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "unplugin-vue-router/client",
+      "vite-plugin-vue-layouts/client",
+      "vite/client"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "eslint.config.js"
+  ]
+}

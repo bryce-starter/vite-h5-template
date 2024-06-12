@@ -1,5 +1,16 @@
-import { defineConfig, presetUno, transformerDirectives, transformerVariantGroup } from 'unocss'
-import { presetEllipsis, presetIcon, presetSafearea, presetShortcuts, transformerWh } from '@bryce-loskie/unocss-preset-mini'
+import {
+  defineConfig,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
+import {
+  presetEllipsis,
+  presetIcon,
+  presetSafearea,
+  presetShortcuts,
+  transformerWh,
+} from '@bryce-loskie/unocss-preset-mini'
 
 export default defineConfig({
   content: {
@@ -16,9 +27,6 @@ export default defineConfig({
       dim: '#eaeaea',
     },
   },
-  shortcuts: [
-    ['wh-full', 'w-full h-full'],
-  ],
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
